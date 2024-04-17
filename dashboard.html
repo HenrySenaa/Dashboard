@@ -1,46 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ptbr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div>
-        <canvas id="chart"></canvas>
-      </div>
-      <div>
-        <canvas id="chart2"></canvas>
-      </div>
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  
+  
+
 </body>
 </html>
-
-
-
- <script>
+<script>
   const ctx = document.getElementById('myChart');
-  const ctx2 = document.getElementById('myChart2');
+
   new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-    
-  }),
-  new Chart(ctx2, {
     type: 'line',
     data: {
       labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
@@ -56,5 +34,6 @@
           beginAtZero: true
         }
       }
-    });
+    }
+  });
 </script>
